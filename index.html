@@ -4,6 +4,63 @@
     <meta charset="UTF-8" />
     <title>Cartoon World</title>
     <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+        background-color: beige;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 10%;
+        background-color: rgb(217, 185, 148);
+      }
+
+      .brand-container {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .logo {
+        width: 70px;
+        height: auto;
+      }
+
+      .header-nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 200px;
+        font-size: 20px;
+      }
+
+      .first-half {
+        height: 90vh;
+        display: block;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .main-description {
+        text-align: center;
+        font-size: 30px;
+        font-family: monospace;
+        font-weight: 100;
+      }
+
+      .brand-highlight {
+        color: red;
+      }
+
+      .brand-main {
+        text-align: center;
+        font-size: 60px;
+      }
+
       a {
         text-decoration: none;
         color: black;
@@ -14,19 +71,19 @@
         color: red;
       }
 
-      section p,
-      h3,
-      a {
-        display: block;
-        text-align: center;
-      }
-
       section {
         border: 3px solid rgb(217, 185, 148);
         border-radius: 10px;
         height: min-content;
         width: 350px;
         padding: 20px;
+      }
+
+      section p,
+      h3,
+      a {
+        display: block;
+        text-align: center;
       }
 
       section:hover {
@@ -42,61 +99,65 @@
         text-align: center;
         height: 300px;
       }
-    </style>
-  </head>
-  <body style="margin: 0px; padding: 0px; background-color: beige">
-    <header
-      style="
+
+      .second-half {
+        height: 90vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      footer {
+        color: black;
+        height: 10vh;
+        padding: 10px 10%;
         display: flex;
         justify-content: space-between;
-        padding: 10px 10%;
         background-color: rgb(217, 185, 148);
-      "
-    >
-      <div style="display: flex; align-items: center; gap: 20px">
-        <img src="./images/logo.webp" alt="logo" width="70px" height="auto" />
+        align-items: center;
+      }
+
+      footer > nav {
+        display: flex;
+        align-items: center;
+        border-left: 1px solid beige;
+        justify-content: center;
+        gap: 30px;
+        width: 50%;
+        font-size: 20px;
+      }
+
+      .copy-right {
+        width: 50%;
+        text-align: center;
+        height: fit-content;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="brand-container">
+        <img src="./images/logo.webp" alt="logo" class="logo" />
 
         <p style="font-size: 26px; font-weight: 700">
           <span style="color: red">Cartoon</span> World
         </p>
       </div>
 
-      <nav
-        style="
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-          width: 200px;
-          font-size: 20px;
-        "
-      >
+      <nav class="header-nav">
         <a href="">Home</a>
         <a href="">Menu</a>
         <a href="">Other</a>
       </nav>
     </header>
     <div style="width: 80%; margin: auto">
-      <main
-        style="
-          height: 90vh;
-          display: block;
-          display: flex;
-          align-items: center;
-          flex-direction: column;
-          justify-content: center;
-        "
-      >
-        <h1 style="text-align: center; font-size: 60px">
-          <span style="color: red">Cartoon</span> World
+      <main class="first-half">
+        <h1 class="brand-main">
+          <span class="brand-highlight">Cartoon</span> World
         </h1>
-        <p
-          style="
-            text-align: center;
-            font-size: 30px;
-            font-family: monospace;
-            font-weight: 100;
-          "
-        >
+
+        <p class="main-description">
           Step into a universe filled with laughter, creativity, and endless
           adventures! 🌟 At Cartoon World, we celebrate the magic of
           animation—bringing you everything from classic favorites to the latest
@@ -105,20 +166,10 @@
         </p>
       </main>
 
-      <div
-        style="
-          height: 90vh;
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-        "
-      >
+      <div class="second-half">
         <section>
           <div>
-            <img
-              src="./images/tom-and-jerry.png"
-              alt="3d-cartoon-baby-genius-photo"
-            />
+            <img src="./images/tom-and-jerry.png" alt="tom and jerry" />
           </div>
           <h3>Tom & Jerry</h3>
 
@@ -132,10 +183,7 @@
 
         <section>
           <div>
-            <img
-              src="./images/sponge-bob.png"
-              alt="3d-cartoon-baby-genius-photo"
-            />
+            <img src="./images/sponge-bob.png" alt="sponge bob" />
           </div>
 
           <h3>SpongeBob SquarePants</h3>
@@ -150,10 +198,7 @@
 
         <section>
           <div>
-            <img
-              src="./images/looney-tunes.png"
-              alt="3d-cartoon-baby-genius-photo"
-            />
+            <img src="./images/looney-tunes.png" alt="looney tunes" />
           </div>
 
           <h3>Looney Tunes</h3>
@@ -168,39 +213,10 @@
       </div>
     </div>
 
-    <footer
-      style="
-        color: black;
-        height: 10vh;
-        padding: 10px 10%;
-        display: flex;
-        justify-content: space-between;
-        background-color: rgb(217, 185, 148);
-        align-items: center;
-      "
-    >
-      <p
-        style="
-          width: 50%;
-          text-align: center;
-          height: fit-content;
-          font-size: 20px;
-        "
-      >
-        &copy;&nbsp;2025
-      </p>
+    <footer>
+      <p class="copy-right">&copy;&nbsp;2025</p>
 
-      <nav
-        style="
-          display: flex;
-          align-items: center;
-          border-left: 1px solid beige;
-          justify-content: center;
-          gap: 30px;
-          width: 50%;
-          font-size: 20px;
-        "
-      >
+      <nav>
         <a href="">contact</a>
         <a href="">about</a>
         <a href="">license</a>
