@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cartoon World</title>
+    <style>
+      a {
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+      }
+
+      a:hover {
+        color: red;
+      }
+
+      section p,
+      h3,
+      a {
+        display: block;
+        text-align: center;
+      }
+
+      section {
+        border: 3px solid rgb(217, 185, 148);
+        border-radius: 10px;
+        height: min-content;
+        width: 350px;
+        padding: 20px;
+      }
+
+      section:hover {
+        border: 3px solid #ff0000ac;
+      }
+
+      section img {
+        width: 300px;
+        height: auto;
+      }
+
+      section div {
+        text-align: center;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body style="margin: 0px; padding: 0px; background-color: beige">
+    <header
+      style="
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 10%;
+        background-color: rgb(217, 185, 148);
+      "
+    >
+      <div style="display: flex; align-items: center; gap: 20px">
+        <img src="./images/logo.webp" alt="logo" width="70px" height="auto" />
+
+        <p style="font-size: 26px; font-weight: 700">
+          <span style="color: red">Cartoon</span> World
+        </p>
+      </div>
+
+      <nav
+        style="
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          width: 200px;
+          font-size: 20px;
+        "
+      >
+        <a href="">Home</a>
+        <a href="">Menu</a>
+        <a href="">Other</a>
+      </nav>
+    </header>
+    <div style="width: 80%; margin: auto">
+      <main
+        style="
+          height: 90vh;
+          display: block;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+        "
+      >
+        <h1 style="text-align: center; font-size: 60px">
+          <span style="color: red">Cartoon</span> World
+        </h1>
+        <p
+          style="
+            text-align: center;
+            font-size: 30px;
+            font-family: monospace;
+            font-weight: 100;
+          "
+        >
+          Step into a universe filled with laughter, creativity, and endless
+          adventures! 🌟 At Cartoon World, we celebrate the magic of
+          animation—bringing you everything from classic favorites to the latest
+          animated wonders. Whether you're a lifelong cartoon lover or just
+          discovering the joy of animation, this is your ultimate destination.
+        </p>
+      </main>
+
+      <div
+        style="
+          height: 90vh;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+        "
+      >
+        <section>
+          <div>
+            <img
+              src="./images/tom-and-jerry.png"
+              alt="3d-cartoon-baby-genius-photo"
+            />
+          </div>
+          <h3>Tom & Jerry</h3>
+
+          <p>
+            A legendary cartoon filled with slapstick comedy, featuring the
+            never-ending chase between a determined cat and a mischievous mouse.
+          </p>
+
+          <a href="">More info</a>
+        </section>
+
+        <section>
+          <div>
+            <img
+              src="./images/sponge-bob.png"
+              alt="3d-cartoon-baby-genius-photo"
+            />
+          </div>
+
+          <h3>SpongeBob SquarePants</h3>
+
+          <p>
+            The beloved underwater sponge who lives in a pineapple and goes on
+            hilarious adventures with his quirky sea friends.
+          </p>
+
+          <a href="">More info</a>
+        </section>
+
+        <section>
+          <div>
+            <img
+              src="./images/looney-tunes.png"
+              alt="3d-cartoon-baby-genius-photo"
+            />
+          </div>
+
+          <h3>Looney Tunes</h3>
+
+          <p>
+            A timeless collection of animated comedy featuring iconic characters
+            like a clever rabbit, a goofy duck, and a mischievous bird.
+          </p>
+
+          <a href="">More info</a>
+        </section>
+      </div>
+    </div>
+
+    <footer
+      style="
+        color: black;
+        height: 10vh;
+        padding: 10px 10%;
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(217, 185, 148);
+        align-items: center;
+      "
+    >
+      <p
+        style="
+          width: 50%;
+          text-align: center;
+          height: fit-content;
+          font-size: 20px;
+        "
+      >
+        &copy;&nbsp;2025
+      </p>
+
+      <nav
+        style="
+          display: flex;
+          align-items: center;
+          border-left: 1px solid beige;
+          justify-content: center;
+          gap: 30px;
+          width: 50%;
+          font-size: 20px;
+        "
+      >
+        <a href="">contact</a>
+        <a href="">about</a>
+        <a href="">license</a>
+      </nav>
+    </footer>
+  </body>
+</html>
