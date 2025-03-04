@@ -1,0 +1,74 @@
+{
+  "cartoons": [
+    {
+      "name": "Ben 10",
+      "image": "images/ben-10.png",
+      "description": "A young boy, Ben Tennyson, finds an alien watch that allows him to transform into different alien species."
+    },
+    {
+      "name": "Teen Titans",
+      "image": "images/teen-titans.png",
+      "description": "A group of young superheroes, led by Robin, battle villains and navigate teenage life."
+    },
+    {
+      "name": "Spider-Man",
+      "image": "images/spider-man.png",
+      "description": "Peter Parker, a teenager bitten by a radioactive spider, becomes the superhero Spider-Man."
+    },
+    {
+      "name": "Batman: The Animated Series",
+      "image": "images/bat-man.png",
+      "description": "Bruce Wayne fights crime in Gotham City as the masked vigilante, Batman."
+    },
+    {
+      "name": "Jackie Chan Adventures",
+      "image": "images/jackie-chan.png",
+      "description": "Follows Jackie Chan and his family as they recover powerful magical artifacts."
+    },
+    {
+      "name": "Oggy and the Cockroaches",
+      "image": "images/oggy-and-cockroaches.png",
+      "description": "Oggy, a lazy cat, is constantly troubled by three mischievous cockroaches."
+    },
+    {
+      "name": "Shinchan",
+      "image": "images/shinchan.png",
+      "description": "A mischievous 5-year-old boy, Shinchan, creates hilarious chaos in his family and school life."
+    },
+    {
+      "name": "SpongeBob SquarePants",
+      "image": "images/sponge-bob.png",
+      "description": "A cheerful sea sponge named SpongeBob goes on hilarious adventures in the underwater city of Bikini Bottom."
+    },
+    {
+      "name": "Minions",
+      "image": "images/minions.png",
+      "description": "Minions are small, yellow creatures known for their mischief and funny language, serving villains in history."
+    },
+    {
+      "name": "Tom and Jerry",
+      "image": "images/tom-and-jerry.png",
+      "description": "The never-ending chase between a clever mouse, Jerry, and a determined cat, Tom."
+    },
+    {
+      "name": "Mickey Mouse",
+      "image": "images/mickey-mouse.png",
+      "description": "The adventures of Mickey Mouse and his friends in the magical world of Disney."
+    },
+    {
+      "name": "Looney Tunes",
+      "image": "images/looney-tunes.png",
+      "description": "A collection of hilarious animated shorts featuring Bugs Bunny, Daffy Duck, and other classic characters."
+    },
+    {
+      "name": "Popeye the Sailor",
+      "image": "images/popeye.png",
+      "description": "A strong sailor who gains super strength after eating spinach, often rescuing Olive Oyl."
+    },
+    {
+      "name": "Scooby-Doo",
+      "image": "images/scooby-doo.png",
+      "description": "A talking Great Dane and his gang solve spooky mysteries in this classic detective cartoon."
+    }
+  ]
+}

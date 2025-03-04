@@ -91,13 +91,32 @@
       }
 
       .card img {
-        width: 300px;
+        max-width: 300px;
+        max-height: 300px;
         height: auto;
+      }
+
+      .card p {
+        height: 74px;
       }
 
       .card div {
         text-align: center;
         height: 300px;
+      }
+
+      .card img,
+      .card h3,
+      .card p,
+      a {
+        transition: opacity 0.9s ease-in-out;
+      }
+
+      .fade-out {
+        opacity: 0;
+      }
+      .fade-in {
+        opacity: 1;
       }
 
       .second-half {
@@ -170,46 +189,58 @@
       <div class="second-half">
         <section class="card">
           <div>
-            <img src="./images/tom-and-jerry.png" alt="tom and jerry" />
+            <img
+              src="./images/tom-and-jerry.png"
+              alt="tom and jerry"
+              class=".fade-in"
+            />
           </div>
-          <h3>Tom & Jerry</h3>
+          <h3 class=".fade-in">Tom & Jerry</h3>
 
-          <p>
+          <p class=".fade-in">
             A legendary cartoon filled with slapstick comedy, featuring the
             never-ending chase between a determined cat and a mischievous mouse.
           </p>
 
-          <a href="">More info</a>
+          <a href="" class=".fade-in">More info</a>
         </section>
 
         <section class="card">
           <div>
-            <img src="./images/sponge-bob.png" alt="sponge bob" />
+            <img
+              src="./images/sponge-bob.png"
+              alt="sponge bob"
+              class=".fade-in"
+            />
           </div>
 
-          <h3>SpongeBob SquarePants</h3>
+          <h3 class=".fade-in">SpongeBob SquarePants</h3>
 
-          <p>
+          <p class=".fade-in">
             The beloved underwater sponge who lives in a pineapple and goes on
             hilarious adventures with his quirky sea friends.
           </p>
 
-          <a href="">More info</a>
+          <a href="" class=".fade-in">More info</a>
         </section>
 
         <section class="card">
           <div>
-            <img src="./images/looney-tunes.png" alt="looney tunes" />
+            <img
+              src="./images/looney-tunes.png"
+              alt="looney tunes"
+              class=".fade-in"
+            />
           </div>
 
-          <h3>Looney Tunes</h3>
+          <h3 class=".fade-in">Looney Tunes</h3>
 
-          <p>
+          <p class=".fade-in">
             A timeless collection of animated comedy featuring iconic characters
             like a clever rabbit, a goofy duck, and a mischievous bird.
           </p>
 
-          <a href="">More info</a>
+          <a href="" class=".fade-in">More info</a>
         </section>
       </div>
     </div>
@@ -223,5 +254,54 @@
         <a href="">license</a>
       </nav>
     </footer>
+    <script>
+      const traslate = (cartoons) => {
+        // console.log(cartoons.cartoons[0]);
+        const cards = document.querySelectorAll(".card");
+        let index = 0;
+
+        setInterval(() => {
+          for (const card of cards) {
+            const img = card.querySelector("img");
+            const title = card.querySelector("h3");
+            const desc = card.querySelector("p");
+            const info = card.querySelector("a");
+
+            img.classList.toggle("fade-out");
+            title.classList.toggle("fade-out");
+            desc.classList.toggle("fade-out");
+            info.classList.toggle("fade-out");
+
+            setTimeout(() => {
+              console.log(cartoons[index]);
+              img.setAttribute("src", cartoons[index].image);
+              title.textContent = cartoons[index].name;
+              desc.textContent = cartoons[index].description;
+
+              img.classList.toggle("fade-out");
+              title.classList.toggle("fade-out");
+              desc.classList.toggle("fade-out");
+              info.classList.toggle("fade-out");
+
+              index = (index + 1) % cartoons.length;
+            }, 900);
+          }
+        }, 5000);
+      };
+      const someFunction = async () => {
+        const d = await fetch("contents.json").then((data) => {
+          return data.body
+            .getReader()
+            .read()
+            .then(({ done, value }) => new TextDecoder().decode(value));
+        });
+
+        const data = JSON.parse(d);
+        // console.log(cartoons);
+        traslate(data.cartoons);
+      };
+
+      someFunction();
+    </script>
   </body>
 </html>

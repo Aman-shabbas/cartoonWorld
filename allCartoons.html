@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>All Cartoons</title>
+    <style>
+      body {
+        scroll-behavior: smooth;
+        margin: 0px;
+        padding: 0px;
+        background-color: beige;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 10%;
+        background-color: rgb(217, 185, 148);
+      }
+
+      .brand-container {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .logo {
+        width: 70px;
+        height: auto;
+      }
+
+      .header-nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 200px;
+        font-size: 20px;
+      }
+
+      .first-half {
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .main-description {
+        text-align: center;
+        font-size: 30px;
+        font-family: monospace;
+        font-weight: 100;
+      }
+
+      .brand-highlight {
+        color: red;
+      }
+
+      .brand-main {
+        text-align: center;
+        font-size: 60px;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+      }
+
+      a:hover {
+        color: red;
+      }
+
+      .main-container {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+      }
+
+      .category-container {
+        width: 80%;
+        margin: auto;
+        text-align: left;
+        padding: 20px;
+        padding-bottom: 70px;
+        border-bottom: 3px solid rgb(217, 185, 148);
+        display: none;
+      }
+
+      .category-container:last-child {
+        border: none;
+      }
+
+      .category-header {
+        text-transform: capitalize;
+      }
+
+      .card-container {
+        width: 100%;
+        overflow: scroll;
+        display: flex;
+        gap: 30px;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+
+      .card-container::-webkit-scrollbar {
+        display: none;
+      }
+
+      .card {
+        border: 3px solid rgb(217, 185, 148);
+        border-radius: 10px;
+        height: min-content;
+        width: 350px;
+        padding: 20px;
+        display: none;
+      }
+
+      .card p,
+      h3,
+      a {
+        display: block;
+        text-align: center;
+      }
+
+      .card:hover {
+        border: 3px solid #ff0000ac;
+      }
+
+      .card img {
+        max-width: 300px;
+        max-height: 300px;
+        height: auto;
+      }
+
+      .card div {
+        text-align: center;
+        width: 300px;
+        height: 300px;
+      }
+
+      .card p {
+        height: 74px;
+      }
+
+      .second-half {
+        height: 90vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      footer {
+        color: black;
+        height: 10vh;
+        padding: 10px 10%;
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(217, 185, 148);
+        align-items: center;
+      }
+
+      footer > nav {
+        display: flex;
+        align-items: center;
+        border-left: 1px solid beige;
+        justify-content: center;
+        gap: 30px;
+        width: 50%;
+        font-size: 20px;
+      }
+
+      .copy-right {
+        width: 50%;
+        text-align: center;
+        height: fit-content;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="brand-container">
+        <img src="./images/logo.webp" alt="logo" class="logo" />
+
+        <p style="font-size: 26px; font-weight: 700">
+          <span class="brand-highlight">Cartoon</span> World
+        </p>
+      </div>
+
+      <nav class="header-nav">
+        <a href="">Home</a>
+        <a href="">Menu</a>
+        <a href="">Other</a>
+      </nav>
+    </header>
+
+    <div class="main-container">
+      <h1>All Categories</h1>
+      <div class="category-container">
+        <h2 class="category-header">Comedy</h2>
+        <div class="card-container">
+          <div class="card">
+            <div>
+              <img src="./images/looney-tunes.png" alt="looney tunes" />
+            </div>
+
+            <h3>Looney Tunes</h3>
+
+            <p>
+              A timeless collection of animated comedy featuring iconic
+              characters like a clever rabbit, a goofy duck, and a mischievous
+              bird.
+            </p>
+
+            <a href="">More info</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p class="copy-right">&copy;&nbsp;2025</p>
+
+      <nav>
+        <a href="">contact</a>
+        <a href="">about</a>
+        <a href="">license</a>
+      </nav>
+    </footer>
+    <script>
+      const cartoons = {
+        action: [
+          {
+            name: "Ben 10",
+            image: "images/ben-10.png",
+            description:
+              "A young boy, Ben Tennyson, finds an alien watch that allows him to transform into different alien species.",
+          },
+          {
+            name: "Teen Titans",
+            image: "images/teen-titans.png",
+            description:
+              "A group of young superheroes, led by Robin, battle villains and navigate teenage life.",
+          },
+          {
+            name: "Spider-Man",
+            image: "images/spider-man.png",
+            description:
+              "Peter Parker, a teenager bitten by a radioactive spider, becomes the superhero Spider-Man.",
+          },
+          {
+            name: "Batman: The Animated Series",
+            image: "images/bat-man.png",
+            description:
+              "Bruce Wayne fights crime in Gotham City as the masked vigilante, Batman.",
+          },
+          {
+            name: "Jackie Chan Adventures",
+            image: "images/jackie-chan.png",
+            description:
+              "Follows Jackie Chan and his family as they recover powerful magical artifacts.",
+          },
+        ],
+        comedy: [
+          {
+            name: "Oggy and the Cockroaches",
+            image: "images/oggy-and-cockroaches.png",
+            description:
+              "Oggy, a lazy cat, is constantly troubled by three mischievous cockroaches.",
+          },
+          {
+            name: "Shinchan",
+            image: "images/shinchan.png",
+            description:
+              "A mischievous 5-year-old boy, Shinchan, creates hilarious chaos in his family and school life.",
+          },
+          {
+            name: "SpongeBob SquarePants",
+            image: "images/sponge-bob.png",
+            description:
+              "A cheerful sea sponge named SpongeBob goes on hilarious adventures in the underwater city of Bikini Bottom.",
+          },
+          {
+            name: "Minions",
+            image: "images/minions.png",
+            description:
+              "Minions are small, yellow creatures known for their mischief and funny language, serving villains in history.",
+          },
+        ],
+        classic: [
+          {
+            name: "Tom and Jerry",
+            image: "images/tom-and-jerry.png",
+            description:
+              "The never-ending chase between a clever mouse, Jerry, and a determined cat, Tom.",
+          },
+          {
+            name: "Mickey Mouse",
+            image: "images/mickey-mouse.png",
+            description:
+              "The adventures of Mickey Mouse and his friends in the magical world of Disney.",
+          },
+          {
+            name: "Looney Tunes",
+            image: "images/looney-tunes.png",
+            description:
+              "A collection of hilarious animated shorts featuring Bugs Bunny, Daffy Duck, and other classic characters.",
+          },
+          {
+            name: "Popeye the Sailor",
+            image:
+              "images/popeye.png",
+            description:
+              "A strong sailor who gains super strength after eating spinach, often rescuing Olive Oyl.",
+          },
+          {
+            name: "Scooby-Doo",
+            image:
+              "images/scooby-doo.png",
+            description:
+              "A talking Great Dane and his gang solve spooky mysteries in this classic detective cartoon.",
+          },
+        ],
+      };
+
+      const mainContainer = document.querySelector(".main-container");
+
+      for (const [category, contents] of Object.entries(cartoons)) {
+        const categoryContainer = document
+          .querySelector(".category-container")
+          .cloneNode(true);
+        categoryContainer.style.display = "block";
+        categoryContainer.querySelector(".category-header").textContent =
+          category;
+        const cardContiner = categoryContainer.querySelector(".card-container");
+        for (const cartoon of contents) {
+          const card = categoryContainer.querySelector(".card").cloneNode(true);
+          card.style.display = "block";
+          card.querySelector("h3").textContent = cartoon.name;
+          card.querySelector("img").setAttribute("src", cartoon.image);
+          card.querySelector("p").textContent = cartoon.description;
+          cardContiner.appendChild(card);
+        }
+        mainContainer.appendChild(categoryContainer);
+      }
+
+      // const cards = document.querySelectorAll(".card-container");
+      // for (const [index, card] of cards.entries()) {
+      //   const cartoon = cartoons[index];
+      //   card.querySelector("h3").textContent = cartoon.show;
+      //   card.querySelector("img").setAttribute("src", cartoon.image);
+      //   card.querySelector("p").textContent = cartoon.description;
+      // }
+    </script>
+  </body>
+</html>
